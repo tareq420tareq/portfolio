@@ -100,7 +100,7 @@ body {
   transition: 0.5s ease;
   font-size: 20px;
   animation: SlideLeft 1s ease forwards;
-  animation-delay:  calc(0.2s * var(--i));
+  animation-delay: calc(0.2s * var(--i));
   opacity: 0;
 }
 .social-links a:hover {
@@ -120,7 +120,7 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
   transition: 0.5s ease;
-    animation: SlideTop 1s ease forwards;
+  animation: SlideTop 1s ease forwards;
   animation-delay: 2s;
   opacity: 0;
 }
@@ -130,10 +130,154 @@ body {
 }
 .home_image img {
   max-width: 450px;
-      animation: ZoomIn 1s ease forwards;
+  animation: ZoomIn 1s ease forwards;
   animation-delay: 2s;
   opacity: 0;
 }
+
+
+
+
+
+
+/* skill section start from here */
+
+.skill-bar {
+  padding: 60px 20px;
+  background: #3b3b5b;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.skill-bar h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #111827;
+}
+
+.skill-bar h1 span {
+  color: #10b981;
+  font-weight: bold;
+}
+
+.circle-skill {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.circle-skill > div {
+  --percent: 95;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(#10b981 calc(var(--percent) * 1%), #e5e7eb 0%);
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.circle-skill > div:hover {
+  transform: scale(1.07);
+}
+
+.circle-skill a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #111827;
+  text-decoration: none;
+}
+
+.circle-skill p {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #374151;
+  font-weight: 600;
+}
+
+.learning-journey {
+  background: #8686ac;
+  padding: 50px 5%;
+  width: 100%;
+  text-align: center;
+}
+
+.learning-journey h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #0ef;
+  font-weight: bold;
+}
+
+#levelChart {
+  width: 100%;
+  max-width: 1000px;
+  height: 350px;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes SlideRight {
   0% {
@@ -182,7 +326,7 @@ body {
     opacity: 0;
   }
   100% {
-    transform:  scale(1);
+    transform: scale(1);
     opacity: 1;
   }
 }

@@ -34,26 +34,26 @@
     <header id="header">
       <a class="logo" href="index.html">Portfolio.</a>
       <nav class="navbar">
-        <a href="#" class="active" style="--i:1;">Home</a>
-        <a href="#" class="" style="--i:2;">Expert In </a>
-        <a href="#" class="" style="--i:3;">Providing Service</a>
-        <a href="#" class="" style="--i:4;">About Me</a>
-        <a href="#" class="" style="--i:5;">Contact Me</a>
+        <a href="#" class="active" style="--i: 1">Home</a>
+        <a href="#" class="" style="--i: 2">Expert In </a>
+        <a href="#" class="" style="--i: 3">Providing Service</a>
+        <a href="#" class="" style="--i: 4">About Me</a>
+        <a href="#" class="" style="--i: 5">Contact Me</a>
       </nav>
     </header>
     <section class="home">
       <div class="home-content">
         <h3>Hello , It's me</h3>
         <h1>Monuwar Tareq</h1>
-        <h3>And I'm a <span  class="multiple-text" ></span></h3>
+        <h3>And I'm a <span class="multiple-text"></span></h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ut?
         </p>
         <div class="social-links">
-          <a href="#" style="--i:6;"><i class="bx bxl-facebook"></i></a>
-          <a href="#" style="--i:7;"><i class="bx bxl-twitter"></i></a>
-          <a href="#" style="--i:8;"><i class="bx bxl-instagram"></i></a>
-          <a href="#" style="--i:9;"><i class="bx bxl-whatsapp"></i></a>
+          <a href="#" style="--i: 6"><i class="bx bxl-facebook"></i></a>
+          <a href="#" style="--i: 7"><i class="bx bxl-twitter"></i></a>
+          <a href="#" style="--i: 8"><i class="bx bxl-instagram"></i></a>
+          <a href="#" style="--i: 9"><i class="bx bxl-whatsapp"></i></a>
         </div>
         <a href="#" class="btn_dnld">Donload Cv </a>
       </div>
@@ -61,11 +61,111 @@
         <img src="img/1748932305924.jpg" alt="" />
       </div>
     </section>
+    <section class="skill-bar">
+      <h1>I'm <span>expert in</span></h1>
+      <div class="circle-skill">
+        <div class="html-details" style="--percent: 95">
+          <a href="#">95%</a>
+          <p>html</p>
+        </div>
+        <div class="css-details" style="--percent: 90">
+          <a href="#">90%</a>
+          <p>css</p>
+        </div>
+        <div class="js-details" style="--percent: 75">
+          <a href="#">75%</a>
+          <p>js</p>
+        </div>
+        <div class="php-details" style="--percent: 80">
+          <a href="#">80%</a>
+          <p>php</p>
+        </div>
+        <div class="python-details" style="--percent: 55">
+          <a href="#">55%</a>
+          <p>python</p>
+        </div>
+      </div>
+    </section>
+    <section class="learning-journey">
+      <h2>📊 My Skill Level Overview</h2>
+      <canvas id="levelChart"></canvas>
+    </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("levelChart").getContext("2d");
 
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["HTML", "CSS", "JavaScript", "PHP", "Python"],
+          datasets: [
+            {
+              label: "Skill Level (%)",
+              data: [95, 90, 75, 80, 55],
+              backgroundColor: [
+                "#10b981", // HTML
+                "#3b82f6", // CSS
+                "#facc15", // JS
+                "#64748b", // PHP
+                "#a855f7", // Python
+              ],
+              borderRadius: 8,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 100,
+              ticks: {
+                color: "#fff",
+                font: {
+                  size: 16, // 👈 increase y-axis tick font size
+                },
+                callback: (value) => value + "%",
+              },
+              title: {
+                display: true,
+                text: "Percentage",
+                color: "#fff",
+                font: {
+                  size: 18, // 👈 y-axis title font size
+                  weight: "bold",
+                },
+              },
+            },
+            x: {
+              ticks: {
+                color: "#fff",
+                font: {
+                  size: 16, // 👈 increase x-axis label font size
+                },
+              },
+            },
+          },
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              bodyColor: "#000",
+              backgroundColor: "#fff",
+              titleColor: "#000",
+              titleFont: {
+                size: 16, // 👈 tooltip title font size
+              },
+              bodyFont: {
+                size: 14, // 👈 tooltip body font size
+              },
+            },
+          },
+        },
+      });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="js/script.js"></script>
-
   </body>
 </html>
